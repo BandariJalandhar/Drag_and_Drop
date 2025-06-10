@@ -34,13 +34,14 @@ function App() {
     setTodo(editTodo.todo)
     setEditId(id)
   }
-  console.log(todos, "tt")
   return (
     <div className="App">
       <div className='container'>
         <h1>Todo List</h1>
         <form className='todoForm' onSubmit={handleSubmit}>
+    
           <input type='text' value={todo} onChange={(e) => setTodo(e.target.value)} />
+  
           <button>{editId ? "edit" : "Go"}</button>
         </form>
         <ul className='allTodos'>
@@ -53,7 +54,6 @@ function App() {
               </li>
             ))
           }
-
         </ul>
       </div>
       <br/>
